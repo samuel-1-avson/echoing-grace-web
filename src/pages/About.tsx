@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
+import ParallaxSection from '@/components/ParallaxSection';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const About = () => {
@@ -8,22 +9,27 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-16 px-4 church-gradient text-white">
+      <ParallaxSection 
+        className="py-16 px-4 church-gradient text-white"
+        backgroundImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop"
+        overlay
+        speed={0.3}
+      >
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 scroll-animate" data-scroll-id="about-title">
             About Grace Community Church
           </h1>
-          <p className="text-xl opacity-90 animate-fade-in [animation-delay:0.2s]">
+          <p className="text-xl opacity-90 scroll-slide-left" data-scroll-id="about-subtitle">
             Discover our story, mission, and the values that guide our community
           </p>
         </div>
-      </section>
+      </ParallaxSection>
 
       {/* Mission & Vision */}
-      <section className="py-16 px-4">
+      <ParallaxSection className="py-16 px-4" patternOverlay>
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="warm-shadow animate-fade-in">
+            <Card className="floating-shadow scroll-slide-left" data-scroll-id="mission-card">
               <CardHeader>
                 <CardTitle className="font-heading text-2xl text-primary">Our Mission</CardTitle>
               </CardHeader>
@@ -36,7 +42,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="warm-shadow animate-fade-in [animation-delay:0.2s]">
+            <Card className="floating-shadow scroll-slide-right" data-scroll-id="vision-card">
               <CardHeader>
                 <CardTitle className="font-heading text-2xl text-primary">Our Vision</CardTitle>
               </CardHeader>
@@ -50,39 +56,50 @@ const About = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </ParallaxSection>
 
       {/* Our Story */}
-      <section className="py-16 px-4 bg-secondary/30">
+      <ParallaxSection 
+        className="py-16 px-4 bg-secondary/20"
+        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop"
+        overlay
+        speed={0.4}
+      >
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-heading text-3xl font-semibold text-center mb-12 text-primary animate-fade-in">
+          <h2 className="font-heading text-3xl font-semibold text-center mb-12 text-primary scroll-animate" data-scroll-id="story-title">
             Our Story
           </h2>
-          <div className="prose prose-lg mx-auto text-muted-foreground animate-fade-in [animation-delay:0.2s]">
-            <p className="mb-6">
-              Grace Community Church was founded in 1995 with a simple but powerful vision: to create 
-              a place where people could experience God's unconditional love and find their purpose in life. 
-              What started as a small gathering of families has grown into a thriving community of believers 
-              from all walks of life.
-            </p>
-            <p className="mb-6">
-              Over the years, we've remained committed to our core values of faith, fellowship, and service. 
-              We've seen countless lives transformed, families restored, and communities impacted through 
-              the work we do together. Our church is more than a building – it's a family united by our 
-              shared love for God and each other.
-            </p>
-            <p>
-              Today, we continue to grow and evolve while staying true to our foundational beliefs. 
-              We're excited about the future and the opportunities God has in store for our community.
-            </p>
+          <div className="prose prose-lg mx-auto text-muted-foreground">
+            <div className="scroll-animate" data-scroll-id="story-p1">
+              <p className="mb-6">
+                Grace Community Church was founded in 1995 with a simple but powerful vision: to create 
+                a place where people could experience God's unconditional love and find their purpose in life. 
+                What started as a small gathering of families has grown into a thriving community of believers 
+                from all walks of life.
+              </p>
+            </div>
+            <div className="scroll-slide-left" data-scroll-id="story-p2">
+              <p className="mb-6">
+                Over the years, we've remained committed to our core values of faith, fellowship, and service. 
+                We've seen countless lives transformed, families restored, and communities impacted through 
+                the work we do together. Our church is more than a building – it's a family united by our 
+                shared love for God and each other.
+              </p>
+            </div>
+            <div className="scroll-slide-right" data-scroll-id="story-p3">
+              <p>
+                Today, we continue to grow and evolve while staying true to our foundational beliefs. 
+                We're excited about the future and the opportunities God has in store for our community.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </ParallaxSection>
 
       {/* Core Beliefs */}
-      <section className="py-16 px-4">
+      <ParallaxSection className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-heading text-3xl font-semibold text-center mb-12 text-primary animate-fade-in">
+          <h2 className="font-heading text-3xl font-semibold text-center mb-12 text-primary scroll-animate" data-scroll-id="beliefs-title">
             Core Beliefs
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -104,7 +121,13 @@ const About = () => {
                 description: "We believe in serving others as an expression of God's love and our faith."
               }
             ].map((belief, index) => (
-              <Card key={belief.title} className={`warm-shadow animate-fade-in [animation-delay:${0.1 * index}s]`}>
+              <Card 
+                key={belief.title} 
+                className={`floating-shadow hover:scale-105 transition-all duration-500 ${
+                  index % 2 === 0 ? 'scroll-slide-left' : 'scroll-slide-right'
+                }`}
+                data-scroll-id={`belief-${index}`}
+              >
                 <CardHeader>
                   <CardTitle className="font-heading text-xl text-primary">{belief.title}</CardTitle>
                 </CardHeader>
@@ -115,7 +138,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </ParallaxSection>
     </div>
   );
 };

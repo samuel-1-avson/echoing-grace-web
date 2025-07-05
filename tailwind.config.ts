@@ -63,16 +63,28 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				heading: ['Playfair Display', 'Georgia', 'serif'],
+				body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			fontFamily: {
-				heading: ['Playfair Display', 'Georgia', 'serif'],
-				body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-			},
 			keyframes: {
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'parallax-fade': {
+					'0%': { opacity: '0', transform: 'translateY(60px) scale(0.9)' },
+					'100%': { opacity: '1', transform: 'translateY(0) scale(1)' }
+				},
+				'slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(100px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
@@ -107,6 +119,9 @@ export default {
 				}
 			},
 			animation: {
+				'float': 'float 6s ease-in-out infinite',
+				'parallax-fade': 'parallax-fade 1s ease-out',
+				'slide-up': 'slide-up 0.8s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'scale-in': 'scale-in 0.5s ease-out',
