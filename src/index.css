@@ -6,39 +6,39 @@
 
 @layer base {
   :root {
-    /* Base colors - warm and welcoming */
-    --background: 35 20% 98%;
-    --foreground: 25 25% 15%;
+    /* Base colors - clean and modern */
+    --background: 210 40% 98%;
+    --foreground: 222 84% 4.9%;
 
     /* Cards and surfaces */
-    --card: 35 30% 96%;
-    --card-foreground: 25 25% 15%;
+    --card: 210 40% 96%;
+    --card-foreground: 222 84% 4.9%;
 
-    --popover: 35 30% 96%;
-    --popover-foreground: 25 25% 15%;
+    --popover: 210 40% 96%;
+    --popover-foreground: 222 84% 4.9%;
 
-    /* Primary - warm gold for spiritual elements */
-    --primary: 43 74% 49%;
-    --primary-foreground: 35 30% 98%;
+    /* Primary - vibrant blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Secondary - soft cream */
-    --secondary: 42 33% 93%;
-    --secondary-foreground: 25 25% 15%;
+    /* Secondary - bright yellow */
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 222 84% 4.9%;
 
     /* Muted tones */
-    --muted: 42 33% 93%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 210 40% 93%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Accent - gentle blue */
-    --accent: 204 44% 88%;
-    --accent-foreground: 25 25% 15%;
+    /* Accent - light blue */
+    --accent: 210 40% 88%;
+    --accent-foreground: 222 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 35 30% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 42 23% 89%;
-    --input: 42 23% 89%;
-    --ring: 43 74% 49%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
 
@@ -114,15 +114,15 @@
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary) / 0.9) 0%, hsl(var(--accent) / 0.8) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.9) 0%, hsl(var(--secondary) / 0.8) 100%);
   }
   
   .parallax-gradient {
     background: linear-gradient(135deg, 
       hsl(var(--primary) / 0.95) 0%, 
-      hsl(var(--primary) / 0.85) 25%,
-      hsl(var(--accent) / 0.90) 50%,
-      hsl(var(--primary) / 0.95) 75%,
+      hsl(var(--secondary) / 0.85) 25%,
+      hsl(var(--primary) / 0.90) 50%,
+      hsl(var(--secondary) / 0.75) 75%,
       hsl(var(--primary) / 0.9) 100%
     );
   }
