@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Leadership', path: '/leadership' },
-    { name: 'Ministries', path: '/ministries' },
+    { name: 'Departments', path: '/departments' },
     { name: 'Events', path: '/events' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -27,7 +27,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-full church-gradient"></div>
             <span className="font-heading text-xl font-semibold text-primary">
-              Grace Community
+              PENSA-UMaT
             </span>
           </Link>
 

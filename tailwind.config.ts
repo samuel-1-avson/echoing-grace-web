@@ -64,8 +64,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				heading: ['Playfair Display', 'Georgia', 'serif'],
-				body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
+				body: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

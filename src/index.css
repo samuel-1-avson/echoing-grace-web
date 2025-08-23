@@ -6,39 +6,39 @@
 
 @layer base {
   :root {
-    /* Base colors - clean and modern */
-    --background: 210 40% 98%;
-    --foreground: 222 84% 4.9%;
+    /* PENSA-UMaT Brand Colors */
+    --background: 210 25% 98%;
+    --foreground: 210 40% 15%;
 
     /* Cards and surfaces */
-    --card: 210 40% 96%;
-    --card-foreground: 222 84% 4.9%;
+    --card: 210 25% 96%;
+    --card-foreground: 210 40% 15%;
 
-    --popover: 210 40% 96%;
-    --popover-foreground: 222 84% 4.9%;
+    --popover: 210 25% 96%;
+    --popover-foreground: 210 40% 15%;
 
-    /* Primary - vibrant blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Navy */
+    --primary: 210 65% 17%;
+    --primary-foreground: 210 25% 98%;
 
-    /* Secondary - bright yellow */
-    --secondary: 45 93% 58%;
-    --secondary-foreground: 222 84% 4.9%;
+    /* Secondary - Gold */
+    --secondary: 45 85% 56%;
+    --secondary-foreground: 210 40% 15%;
 
-    /* Muted tones */
-    --muted: 210 40% 93%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted tones - Light Gray */
+    --muted: 210 17% 96%;
+    --muted-foreground: 210 15% 47%;
 
-    /* Accent - light blue */
-    --accent: 210 40% 88%;
-    --accent-foreground: 222 84% 4.9%;
+    /* Accent - Emerald */
+    --accent: 177 85% 24%;
+    --accent-foreground: 210 25% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 25% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 210 20% 89%;
+    --input: 210 20% 89%;
+    --ring: 210 65% 17%;
 
     --radius: 0.5rem;
 
@@ -120,9 +120,9 @@
   .parallax-gradient {
     background: linear-gradient(135deg, 
       hsl(var(--primary) / 0.95) 0%, 
-      hsl(var(--secondary) / 0.85) 25%,
-      hsl(var(--primary) / 0.90) 50%,
-      hsl(var(--secondary) / 0.75) 75%,
+      hsl(var(--accent) / 0.85) 25%,
+      hsl(var(--secondary) / 0.90) 50%,
+      hsl(var(--primary) / 0.75) 75%,
       hsl(var(--primary) / 0.9) 100%
     );
   }
